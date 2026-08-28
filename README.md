@@ -1,6 +1,6 @@
 # Smart Hospital Priority Management System
 
-A high-performance emergency triage and hospital queuing system built in **C** using dynamic memory allocation and **Priority Queues (Singly Linked Lists)**.
+A high-performance emergency triage and hospital queuing system built in **C** using dynamic memory allocation and **Priority Queues ( Linked Lists)**.
 
 ---
 
