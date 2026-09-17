@@ -6,7 +6,7 @@
 
 int main()
 {
-    char ch;
+    int ch;
 
     while (1)
     {
@@ -42,13 +42,13 @@ int main()
             treat();
             break;
         case 3:
-            display();
+            // display();
             break;
         case 4:
-            search();
+            // search();
             break;
         case 5:
-            analysis();
+            // analysis();
             break;
         case 6:
             printf("\n----------------EXIT----------------\n");

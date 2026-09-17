@@ -1,20 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "headers/patient.h"
 #include "headers/queue.h"
+#include "headers/patient.h"
 
-void admit(){
+static Patient* head = NULL;
 
-    push();
-    printf("Admit Function\n");
+void admit()
+{
+    Patient *newPatient = (Patient *)malloc(sizeof(Patient));
+    if (newPatient == NULL)
+    {
+        printf("Memory allocation failed!\n");
+        return;
+    }
+    printf("Enter Patient ID: ");
+    scanf("%d", &newPatient->id);
+
+    printf("Enter Patient Name: ");
+    scanf(" %49[^\n]", newPatient->name);
+
+    printf("Enter Condition: ");
+    scanf(" %49[^\n]", newPatient->condition);
+
+    printf("Enter Priority (1-Critical, 2-Serious, 3-Normal): ");
+    scanf("%d", &newPatient->priority);
+
+    newPatient->next = NULL;
+
+    push(&head, newPatient);
+
+    printf("Patient admitted successfully!\n");
 }
 
-void treat(){
-    pop();
+void treat()
+{
+    pop(&head);
     printf("Treat Function\n");
-}
-
-void searchByID(){
-    search();
-    printf("Got patient\n");
 }
