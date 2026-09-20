@@ -4,7 +4,7 @@
 
 void push(Patient** head, Patient* newPatient);
 
-void pop();
+int pop();
 
 void search();
 

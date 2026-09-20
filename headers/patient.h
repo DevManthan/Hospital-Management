@@ -11,5 +11,5 @@ typedef struct Patient{
 
 void admit();
 void treat();
-
+void viewQueue();
 #endif

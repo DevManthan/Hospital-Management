@@ -34,6 +34,15 @@ void admit()
 
 void treat()
 {
-    pop(&head);
+    int result = pop(&head);
+    if(result == -1){
+        printf("NO PATIENT ADMITTED");
+    }
+    else{
+        printf("Patient treated and discharged successfully.\n");
+    }
     printf("Treat Function\n");
+}
+void viewQueue() {
+    display(head);
 }

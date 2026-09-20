@@ -42,7 +42,7 @@ int main()
             treat();
             break;
         case 3:
-            // display();
+            viewQueue();
             break;
         case 4:
             // search();
