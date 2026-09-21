@@ -6,7 +6,7 @@
 
 int main()
 {
-    int ch;
+    int ch, id;
 
     while (1)
     {
@@ -26,16 +26,17 @@ int main()
         printf("------------------------------------\n");
         printf("Choice : ");
 
-        if (scanf("%d", &ch) != 1)
+        if (scanf("%d", &ch) != 1) // handles wrong user inputs and infinite loops/crashes
         {
-            while (getchar() != '\n');    
-            ch = -1; 
+            while (getchar() != '\n')
+                ;    // clears the input buffer
+            ch = -1; // redirects the control to default block of switch case as input was invalid
         }
         printf("------------------------------------\n");
 
         switch (ch)
         {
-        case 1:    
+        case 1:
             admit();
             break;
         case 2:
@@ -45,14 +46,16 @@ int main()
             viewQueue();
             break;
         case 4:
-            // search();
+            printf("Enter Patient ID : ");
+            scanf("%d", &id);
+            getPatient(id);
             break;
         case 5:
             // analysis();
             break;
         case 6:
             printf("\n----------------EXIT----------------\n");
-        exit(0);
+            exit(0);
             break;
         default:
             printf("\n-----------INVALID INPUT------------\n");

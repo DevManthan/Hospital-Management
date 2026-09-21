@@ -1,13 +1,13 @@
 #ifndef QUEUE_H
 #define QUEUE_H
- #include "patient.h"
+#include "patient.h"
 
-void push(Patient** head, Patient* newPatient);
+void push(Patient **head, Patient *newPatient);
 
-int pop();
+int pop(Patient **head);
 
-void search();
+Patient* search(Patient *head, int id);
 
-void display();
+void display(Patient *head);
 
 #endif
