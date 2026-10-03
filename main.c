@@ -51,7 +51,7 @@ int main()
             getPatient(id);
             break;
         case 5:
-            // analysis();
+            report();
             break;
         case 6:
             printf("\n----------------EXIT----------------\n");

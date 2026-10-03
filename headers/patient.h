@@ -12,5 +12,6 @@ typedef struct Patient{
 void admit();
 void treat();
 void viewQueue();
+void report();
 void getPatient(int id);
 #endif

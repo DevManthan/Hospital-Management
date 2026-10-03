@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "headers/queue.h"
 #include "headers/patient.h"
+#include "headers/report.h"
 
 static Patient* head = NULL;
 
@@ -64,4 +65,7 @@ void getPatient(int id)
 
 void viewQueue() {
     display(head);//displays all patients
+}
+void report(){
+    analysis(head);
 }
